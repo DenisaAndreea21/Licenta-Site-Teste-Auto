@@ -1,0 +1,109 @@
+body {
+    background-color: gray;
+}
+
+a{
+    cursor: pointer;
+}
+
+.header-home{
+    background-color: #0C0C0C;
+    /*margin-left: 260px;*/
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.header-home-logo{
+    width: 248px;
+    height: 100%;
+    padding-left: 10px;
+    align-self: center;
+    column-gap: 10px;
+    display: flex;
+}
+
+.header-home-logo:hover{
+    .header-home-logo-Traseu{   
+        font-size: 31px;
+    }
+    .header-home-logo-Sigur{   
+        font-size: 31px;
+    }
+}
+
+.header-home-logo img{
+    height: 40px;
+    width: auto;
+    align-self: center;
+}
+
+.header-home-logo div{
+    font-size: 30px;
+    font-weight: 600;
+    width: 183px;
+    align-self: center;
+    font-family: "Roboto Serif", serif;
+    display: flex;
+}
+
+.header-home-logo-Traseu{   
+    color: #fff;
+}
+
+.header-home-logo-Sigur{   
+    color: #0181EF;
+}
+
+.header-home-nav{
+    width: 764px;
+    height: 100%;
+}
+
+.header-home-nav ul li{
+    display: inline;
+    float: left;
+}
+
+.header-home-nav ul li a{
+    padding: 0 22px;
+    color: #FBFBFB;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 60px;
+    display: block;
+    height: 100%;
+}
+
+.header-home-nav ul li a:hover{
+    color: #0181EF;
+}
+
+.header-home-buttons{
+    width: 294px;
+    height: 40px;
+    column-gap: 20px;
+    align-self: center;
+    display: flex;
+}
+
+.header-home-buttons button{
+    color: #0C0C0C;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 36px;
+    border: none;
+    outline: none;
+    background-color: #FBFBFB;
+    display: block;
+    height: 100%;
+}
+
+.header-home-buttons button:hover{
+    cursor: pointer;
+    color: #0181EF;
+}
