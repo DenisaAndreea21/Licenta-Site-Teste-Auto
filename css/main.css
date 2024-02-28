@@ -1,36 +1,62 @@
-body {
-    background-color: gray;
+:root{
+    --lightBlue: #0181EF;
+    --kindOfBlack: #0C0C0C;
+    --kindOfWhite: #FBFBFB;
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: 2.8rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+h3{
+    font-size: 2.2rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
 }
 
 a{
     cursor: pointer;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
 }
 
 .header-home{
     background-color: #0C0C0C;
-    /*margin-left: 260px;*/
-    width: 100%;
+    background-image: url(../img/BG.png);
+    width: 1400px;
     height: 60px;
     justify-content: space-between;
     display: flex;
 }
 
 .header-home-logo{
-    width: 248px;
+    width:fit-content;
     height: 100%;
-    padding-left: 10px;
+    padding: 0 10px;
     align-self: center;
     column-gap: 10px;
     display: flex;
-}
-
-.header-home-logo:hover{
-    .header-home-logo-Traseu{   
-        font-size: 31px;
-    }
-    .header-home-logo-Sigur{   
-        font-size: 31px;
-    }
 }
 
 .header-home-logo img{
@@ -40,24 +66,24 @@ a{
 }
 
 .header-home-logo div{
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
-    width: 183px;
+    width: fit-content;
     align-self: center;
     font-family: "Roboto Serif", serif;
     display: flex;
 }
 
 .header-home-logo-Traseu{   
-    color: #fff;
+    color: var(--kindOfWhite);
 }
 
 .header-home-logo-Sigur{   
-    color: #0181EF;
+    color: var(--lightBlue);
 }
 
 .header-home-nav{
-    width: 764px;
+    width: fit-content;
     height: 100%;
 }
 
@@ -67,9 +93,9 @@ a{
 }
 
 .header-home-nav ul li a{
-    padding: 0 22px;
-    color: #FBFBFB;
-    font-size: 20px;
+    padding: 0 10px;
+    color: var(--kindOfWhite);
+    font-size: 2rem;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     line-height: 60px;
@@ -78,32 +104,35 @@ a{
 }
 
 .header-home-nav ul li a:hover{
-    color: #0181EF;
+    color: var(--lightBlue);
 }
 
 .header-home-buttons{
-    width: 294px;
-    height: 40px;
-    column-gap: 20px;
-    align-self: center;
+    width: fit-content;
+    height: 100%;
+    column-gap: 15px;
+    padding: 0 10px;
+    align-items: center;
     display: flex;
 }
 
 .header-home-buttons button{
-    color: #0C0C0C;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    padding: 8px 15px;
     border-radius: 36px;
-    border: none;
-    outline: none;
-    background-color: #FBFBFB;
+    background-color: var(--kindOfWhite);
     display: block;
-    height: 100%;
+    height: 40px;
 }
 
-.header-home-buttons button:hover{
+.header-home-buttons button p{
+    padding: 0 12px;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+.header-home-buttons button:hover p{
     cursor: pointer;
-    color: #0181EF;
+    color: var(--lightBlue);
 }
