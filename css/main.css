@@ -2,6 +2,11 @@
     --lightBlue: #0181EF;
     --kindOfBlack: #0C0C0C;
     --kindOfWhite: #FBFBFB;
+    --anotherWhite: #D9D9D9;
+    --pink: #ffb4b4;
+    --darkPink: #ef9797;
+    --gray: #F4F4F4;
+    --darkGray: #ebe6e6;
     font-size: 62.5%;
 }
 
@@ -41,10 +46,12 @@ a{
     line-height: 1.75;
 }
 
+/*Header*/
+
 .header-home{
-    background-color: #0C0C0C;
+    background-color: var(--kindOfBlack);
     background-image: url(../img/BG.png);
-    width: 1400px;
+    width: 100%;
     height: 60px;
     justify-content: space-between;
     display: flex;
@@ -136,3 +143,150 @@ a{
     cursor: pointer;
     color: var(--lightBlue);
 }
+
+/* Footer */
+.footer-home{
+    padding: 75px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--kindOfBlack);
+}
+
+.upperSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upperSection a{
+    height: fit-content;
+    width: fit-content; 
+}
+
+.footer-home-logo{
+    margin-left: 30px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+}
+
+.footer-home-logo img{
+    height: 40px;
+    width: auto;
+    align-self: center;
+}
+
+.footer-home-logo div{
+    font-size: 3rem;
+    font-weight: 600;
+    width: fit-content;
+    align-self: center;
+    font-family: "Roboto Serif", serif;
+    display: flex;
+}
+
+.util-footer a:hover li{
+    color: var(--lightBlue);
+}
+
+.util-footer h4{
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.util-footer ul li{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.upperSection ul{
+    width: fit-content;
+    height: fit-content;
+}
+
+.lista-footer li{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.contact-footer{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.contact-footer span{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.sm-footer{
+    margin-top: 24px;
+}
+
+.sm-footer img{
+    width: 50px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.linie{
+    border: none; 
+    border-top: 1px solid var(--gray); 
+    width: 100%; 
+    margin: 40px auto; 
+}
+
+.lowerSection{
+    height: fit-content;
+    display: flex;
+    padding: 0 30px;
+}
+
+.lowerSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowerSection div{
+    height: fit-content;
+    width: fit-content;
+}
+
+.lowerSection div span{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.lowerSection div div{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+

@@ -3,12 +3,14 @@ html, body{
     width: 100%;
     margin: 0;
 }
-
+/* Sect principala*/
 .BG{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background-color: var(--kindOfBlack);
     background-image: url(../img/BG.png), url(../img/ornament.png);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-size: cover, 15vh auto;
     background-repeat: no-repeat, no-repeat;
     background-position: center, left 10%;
@@ -16,13 +18,14 @@ html, body{
 
 .wrapper-index{
     width: 1400px;
-    height: 100%;
+    height: fit-content;
     margin: 0 auto;
 }
 
 main{
     width: 100%;
-    height: 100vh;
+    padding-bottom: 130px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -90,4 +93,639 @@ main{
     margin-top: 100px;
     width: 550px;
     height: 550px;
+}
+
+/*sectiune resurse*/
+
+.sectiune-resurse{
+    padding-top: 100px;
+    height: fit-content;
+    text-align: center;
+}
+
+.resurse-intro{
+    color: var(--pink);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.sectiune-resurse h3{
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1;
+    margin-top: 20px;
+}
+
+.container-resurse{
+    margin: 100px 0;
+}
+
+.resurse-row1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.resurse-row1 a:hover div{
+    background-color: var(--darkGray);
+}
+
+.resurse-row2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resurse-row2 a:hover div{
+    background-color: var(--darkGray);
+}
+
+i{
+    background: black;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    border-radius:50%;
+    display:inline-block;
+    padding:10px;
+}
+  
+i img{
+    width: 50px;
+    display:block;
+}
+
+.resursa-codRutier{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-codRutier span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-codRutier div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.resursa-indicatoare{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-indicatoare span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-indicatoare div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.resursa-intrebariPeCategorii{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-intrebariPeCategorii span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-intrebariPeCategorii div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+
+.resursa-cursuriVideo{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-cursuriVideo span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-cursuriVideo div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.resursa-semnalelePolitistului{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-semnalelePolitistului span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-semnalelePolitistului div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.resursa-puncteDePenalizare{
+    padding: 35px;
+    width: 400px;
+    height: 350px;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.resursa-puncteDePenalizare span{
+    text-align: left;
+    display: block;
+    color: var(--pink);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 30px 0 15px 0;
+}
+
+.resursa-puncteDePenalizare div{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/* sectiune traseu*/
+
+.BG-traseu{
+    background-color: var(--pink);
+    height: fit-content;
+    padding: 50px 0;
+}
+
+.sectiune-traseu{
+    text-align: center;
+    width: 1400px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.sectiune-traseu h3{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.traseu{
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.traseu a:hover div{
+    background-color: var(--darkPink);
+    border-radius: 20px;
+}
+
+.traseu-codRutier {
+    width: 340px;
+    height: 260px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding: 10px;
+}
+
+.container-traseu-codRutier {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 35px;
+}
+
+.container-traseu-codRutier i {
+    margin-right: 10px; 
+}
+
+.container-traseu-codRutier p{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.traseu-descCodRutier{
+    text-align: left;
+    width: 195px;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+.traseu-indicatoare{
+    width: 340px;
+    height: 260px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding: 10px;
+}
+
+.container-traseu-indicatoare{
+    display: flex;
+    align-items: center; 
+    margin-bottom: 35px;
+}
+
+.container-traseu-indicatoare i {
+    margin-right: 10px; 
+}
+
+.container-traseu-indicatoare p{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.traseu-descIndicatoare{
+    text-align: left;
+    width: 195px;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+.traseu-mediuDeInvatare{
+    width: 340px;
+    height: 260px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding: 10px;
+}
+
+.container-traseu-mediuDeInvatare{
+    display: flex;
+    align-items: center; 
+    margin-bottom: 35px;
+}
+
+.container-traseu-mediuDeInvatare i {
+    margin-right: 10px; 
+}
+
+.container-traseu-mediuDeInvatare p{
+    width: 143px;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.traseu-descMediuDeInvatare{
+    text-align: left;
+    width: 195px;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+.traseu-mediuDeTestare{
+    width: 340px;
+    height: 260px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    padding: 10px;
+}
+
+.container-traseu-mediuDeTestare{
+    display: flex;
+    align-items: center; 
+    margin-bottom: 35px;
+}
+
+.container-traseu-mediuDeTestare i {
+    margin-right: 10px; 
+}
+
+.container-traseu-mediuDeTestare p{
+    width: 143px;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.traseu-descMediuDeTestare{
+    text-align: left;
+    width: 195px;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+/*Sectiune about*/
+
+.BG-about {
+    display: flex;
+    align-items: center; /* Centrare verticală */
+    justify-content: center; /* Centrare orizontală */
+    background-color: var(--kindOfBlack);
+    background-image: url(../img/BG2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 690px;
+    padding: 50px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.sectiune-about {
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    height: fit-content;
+}
+
+.sectiune-about h3{
+    width: 915px;
+    height: fit-content;
+    color: var(--anotherWhite);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.about div{
+    width: 915px;
+    height: fit-content;
+    color: var(--anotherWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+/* sectiune recenzii*/
+
+.sectiune-recenzii{
+    height: fit-content;
+    padding: 100px 0;
+}
+
+.sectiune-recenzii h3{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1.2;
+    margin: 0 auto 85px auto;
+}
+
+.recenzii{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recenzie{
+    background-color: var(--lightBlue);
+    width: 445px;
+    height: fit-content;
+    padding: 60px 40px 40px 40px;
+    border-radius: 20px;
+}
+
+.recenzie img{
+    width: 85px;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.text-recenzie{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+.liniuta {
+    border: none; 
+    border-top: 1px solid white; 
+    width: 100%; 
+    margin: 40px auto; 
+}
+
+.user-recenzie{
+    display: flex;
+}
+
+.user-recenzie img{
+    width: 95px;
+    height: 95px;
+    border-radius:50%;
+    margin-bottom: 0;
+}
+
+.user-recenzie span{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin: auto 0 auto 20px;
+}
+
+.comm{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 200px;
+    background-color: var(--pink);
+    border-radius: 20px;
+    margin: 60px auto 0 auto;
+}
+
+.comm h4{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 0 auto 15px auto;
+}
+
+.comm a{
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.comm a:hover p{
+    color: var(--lightBlue);
+}
+
+.comm button{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: var(--kindOfWhite);
+}
+
+.comm button div{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 20px 40px;
+}
+
+.comm button img{
+    height: 50px;
+    width: auto;
+    margin: auto 0;
+}
+
+.comm button p{
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: auto 0 auto 15px;
 }

@@ -1,0 +1,36 @@
+:root{
+    font-size: 62.5%;
+}
+
+.p{
+    font-size: 50px;
+}
+
+.main-intro button{
+    border-radius: 40px;
+    background-color: white;
+    height: 45px;
+    width: fit-content;
+}
+
+.main-intro button a{
+    display: flex;
+    align-items: center;
+}
+
+.main-intro button a img{
+    width: 28px;
+    height: 28px; 
+    margin: 0 5px 0 15px;
+}
+
+.main-intro button a h1{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0 15px 0 5px;
+}
+
+.main-intro button a:hover{
+    cursor: pointer;
+    color: blue;
+}
