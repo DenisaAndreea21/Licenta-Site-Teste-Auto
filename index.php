@@ -173,7 +173,7 @@
                 <a href="mediu_invatare.php">
                     <div class="traseu-mediuDeInvatare">
                         <div class="container-traseu-mediuDeInvatare">
-                            <i><img src="img/indicatoare.png" alt=""></i>
+                            <i><img src="img/invatare.png" alt=""></i>
                             <p>Mediu de învățare</p>
                         </div>
                         <div class="traseu-descMediuDeInvatare">O varietate de chestionare, împărțite pe categorii, unde răspunsul întrebării este afișat pe loc și justificat.</div>
@@ -183,7 +183,7 @@
                 <a href="mediu_testare.php">
                     <div class="traseu-mediuDeTestare">
                         <div class="container-traseu-mediuDeTestare">
-                            <i><img src="img/indicatoare.png" alt=""></i>
+                            <i><img src="img/testare.png" alt=""></i>
                             <p>Mediu de testare</p>
                         </div>
                         <div class="traseu-descMediuDeTestare">Când te simți pregătit, îți poți verifica cunoștințele cu un chestionar de 26 de întrebări prin 2 variante: răspuns afișat imediat sau după încheierea chestionarului.</div>

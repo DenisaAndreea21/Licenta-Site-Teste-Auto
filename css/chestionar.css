@@ -8,13 +8,13 @@
     font-size: 62.5%;
 }
 
-.header-home{
-    background-color: var(--kindOfBlack);
-    background-image: url(../img/BG.png);
-    width: 100%;
-    height: 60px;
-    justify-content: space-between;
-    display: flex;
+.BG{
+    border-radius: 0px;
+}
+
+.footer-home{
+    margin-top: 100px;
+    border-radius: 0px;
 }
 
 .chestionar{

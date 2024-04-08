@@ -227,6 +227,8 @@ a{
     width: fit-content;
     height: fit-content;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-footer span{
@@ -235,6 +237,7 @@ a{
     color: var(--kindOfWhite);
     font-family: "Roboto Serif", serif;
     font-weight: 600;
+    align-self: center;
     font-size: 2rem;
 }
 

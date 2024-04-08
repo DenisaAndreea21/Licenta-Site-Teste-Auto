@@ -1,0 +1,114 @@
+.BG{
+    padding-bottom: 125px;
+}
+
+.intro{
+    color: var(--kindOfWhite);
+    height: fit-content;
+    width: fit-content;
+    font-size: 5rem;
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    margin: 100px auto 0 auto;
+}
+
+.sectiune-categorii{
+    width: 100%;
+    height: fit-content;
+    margin: 100px 0;
+}
+
+.categorie{
+    width: 450px;
+    height: 600px;
+    background-color: var(--gray);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorie h3{
+    height: fit-content;
+    width: fit-content;
+    font-family: "Roboto Serif", serif;
+    color: var(--pink);
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 400;
+    margin: 10px auto 5px auto;
+}
+
+.categorie img{
+    height: 128px;
+    width: 128px;
+    align-self: center;
+    margin: 16px 0;
+}
+
+.categorie ul{
+    height: fit-content;
+    width: fit-content;
+}
+
+.element{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.categorie ul img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.categorie ul li{
+    height: fit-content;
+    width: fit-content;
+    font-family: "Roboto Serif", serif;
+    color: var(--kindOfBlack);
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 500;
+    margin: auto 0;
+    text-align: left;
+}
+
+.categorie button{
+    border-radius: 23px;
+    background-color: var(--kindOfWhite);
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 20px;
+    align-self: center;
+}
+
+.categorie button:hover{
+    cursor: pointer;
+    background-color: var(--darkGray);
+}
+
+.categorie button a{
+    font-family: "DM Sans", sans-serif;
+    color: var(--kindOfBlack);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.row{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.ultima{
+    margin: 0 auto;
+}

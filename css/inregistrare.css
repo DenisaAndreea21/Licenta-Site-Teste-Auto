@@ -1,0 +1,134 @@
+.BG{
+    padding: 20px;
+    border-radius: 0;
+}
+
+.container-inregistrare{
+    width: fit-content;
+    height: fit-content;
+    margin: 100px auto;
+}
+
+.container-inregistrare h3{
+    margin: 0 auto 50px auto;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+form{
+    width: 1200px;
+    height: fit-content;
+    background-color: var(--lightBlue);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.container-inregistrare h4{
+    margin: 0 auto 25px auto;
+    width: fit-content;
+    height: fit-content;
+    color: var(--kindOfBlack);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.formular{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 15px;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.2; 
+}
+
+.inputText{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--kindOfWhite);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 3rem;
+    font-family: "Roboto Serif", serif;
+    font-weight: 500;
+    color: var(--kindOfBlack); 
+}
+
+.inputButton{
+    border-radius: 20px;
+    background-color: var(--kindOfWhite);
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
+    padding: 10px 60px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--kindOfBlack);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.inputButton:hover{
+    cursor: pointer;
+    background-color: var(--darkGray);
+    font-weight: 500;
+}
+.cb{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+}
+
+.cb label{
+    margin-bottom: 0;
+}
+
+.inputCheckbox{
+    accent-color: black;
+    mix-blend-mode: multiply;
+    outline: black 3px auto;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin: auto 25px auto 0;
+}
+
+.inputCheckbox:hover{
+    cursor: pointer;
+}
+
+.inputButton{
+    border-radius: 20px;
+    background-color: var(--kindOfWhite);
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
+    padding: 10px 60px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--kindOfBlack);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.inputButton:hover{
+    cursor: pointer;
+    background-color: var(--darkGray);
+    font-weight: 500;
+}

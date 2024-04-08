@@ -1,5 +1,6 @@
 .BG{
     padding-bottom: 125px;
+    margin-bottom: 50px;
 }
 
 .header-home-nav > ul > li:nth-child(3) > a {
@@ -15,7 +16,7 @@
     justify-content: center;
 }
 
-.intro{
+#intro{
     color: var(--kindOfWhite);
     height: fit-content;
     width: fit-content;
@@ -50,7 +51,7 @@
     line-height: 1.2;
 }
 
-.categorie button{
+.categorie a{
     border-radius: 40px;
     background-color: var(--kindOfWhite);
     height: fit-content;
@@ -59,7 +60,7 @@
     padding: 12px 40px;
 }
 
-.categorie button:hover{
+.categorie a:hover{
     cursor: pointer;
     background-color: var(--darkGray);
 }
@@ -121,3 +122,50 @@ i img {
     transform: translateY(5px);
 }
 
+/*indicatoare */
+.wrapper-indic {
+    width: 1400px;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.cont_indicator {
+    width: calc(33.33% - 20px); 
+    height: 600px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.cont_indicator span{
+    align-self: center;
+    text-align: center;
+    color: var(--pink);
+    font-family: "Roboto Serif", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.cont_indicator img{
+    height: 40%;
+    width: auto;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.cont_indicator div{
+    text-align: center;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}

@@ -1,3 +1,25 @@
+<?php
+require "includes/dbh.inc.php";
+$isIndicatoareDisplayed = false;
+if (isset($_GET['categorie'])) {
+    $categorie = $_GET['categorie'];
+    $isIndicatoareDisplayed = true;
+    try {
+        $query = "SELECT explicatie_indicator, url_indicator, titlu_indicator
+                    FROM indicatoare
+                    WHERE categorie=:categorie";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':categorie', $categorie, PDO::PARAM_STR);
+        $stmt->execute();
+        $indicatoare = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $pdo = null;
+        $stmt = null;
+
+    } catch (PDOException $e) {
+        die ("Eroare la interogare: " . $e->getMessage());
+    }
+} 
+?>
 <!DOCTYPE html>
 <html lang="ro">
 
@@ -17,6 +39,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/indicatoare.css">
+    <!--pentru schimbare text indicatoare -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -61,121 +85,142 @@
             </header>
 
             <!-- intro -->
-            <h3 class="intro">Indicatoare</h3>
+            <?php if (!$isIndicatoareDisplayed) { ?>
+                <h3 id="intro">Indicatoare</h3>
+            <?php } else { ?>
+                <?php if ($categorie == "aditionale") { ?>
+                    <h3 id="intro">Indicatoare adiționale</h3>
+                <?php } else { ?>
+                    <h3 id="intro">Indicatoare de <?php echo $categorie; ?></h3>
+                <?php } ?>
+            <?php } ?>
+
         </div>
 
     </div>
 
-    <!-- indicatoare -->
-    <div class="wrapper-index">
-        <div class="sectiune-resurse">
-            <div class="container-resurse">
-                <div class="resurse-row1">
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/avertizare1.png" alt=""></i>
-                            <i><img src="img/avertizare2.png" alt=""></i>
-                            <i><img src="img/avertizare3.png" alt=""></i>
-                        </div>
-                        <span>Indicatoare de avertizare</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
-                    </div>
-
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/restrictie1.png" alt=""></i>
-                            <i><img src="img/restrictie2.png" alt=""></i>
-                            <i><img src="img/restrictie3.png" alt=""></i>
-                        </div>
-                        <span>Indicatoare de restricție/interzicere</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
-                    </div>
-
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/prioritate1.png" alt=""></i>
-                            <i><img src="img/prioritate2.png" alt=""></i>
-                            <i><img src="img/prioritate3.png" alt="" class="triunghi"></i>
-                        </div>
-                        <span>Indicatoare de prioritate</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
-                    </div>
+    <?php if($isIndicatoareDisplayed){ ?>
+        <div class="wrapper-indic">
+            <?php foreach ($indicatoare as $indicator) {?>
+                <div class="cont_indicator">
+                    <span><?php echo $indicator['titlu_indicator'] . "<br>"; ?></span>
+                    <img src="<?php echo $indicator['url_indicator'] ?>" alt="">
+                    <div><?php echo $indicator['explicatie_indicator'] . "<br>"; ?></div>
                 </div>
-
-                <div class="resurse-row2">
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/obligare1.png" alt=""></i>
-                            <i><img src="img/obligare2.png" alt=""></i>
-                            <i><img src="img/obligare3.png" alt=""></i>
+            <?php } ?>
+        </div>
+    <?php } else { ?>
+        <!-- indicatoare -->
+        <div class="wrapper-index">
+            <div class="sectiune-resurse">
+                <div class="container-resurse">
+                    <div class="resurse-row1">
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/avertizare1.png" alt=""></i>
+                                <i><img src="img/avertizare2.png" alt=""></i>
+                                <i><img src="img/avertizare3.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare de avertizare</span>
+                            
+                                <a href="indicatoare.php?categorie=avertizare">
+                                    <p>Învață</p>
+                                </a>
+                            
                         </div>
-                        <span>Indicatoare de obligare</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
+
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/restrictie1.png" alt=""></i>
+                                <i><img src="img/restrictie2.png" alt=""></i>
+                                <i><img src="img/restrictie3.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare de restricție/interzicere</span>
+                            
+                                <a href="indicatoare.php?categorie=interzicere">
+                                    <p>Învață</p>
+                                </a>
+                            
+                        </div>
+
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/prioritate1.png" alt=""></i>
+                                <i><img src="img/prioritate2.png" alt=""></i>
+                                <i><img src="img/prioritate3.png" alt="" class="triunghi"></i>
+                            </div>
+                            <span>Indicatoare de prioritate</span>
+                            
+                                <a href="indicatoare.php?categorie=prioritate">
+                                    <p>Învață</p>
+                                </a>
+                            
+                        </div>
                     </div>
 
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/orientare1.png" alt=""></i>
-                            <i><img src="img/orientare2.png" alt=""></i>
-                            <i><img src="img/orientare3.png" alt=""></i>
+                    <div class="resurse-row2">
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/obligare1.png" alt=""></i>
+                                <i><img src="img/obligare2.png" alt=""></i>
+                                <i><img src="img/obligare3.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare de obligare</span>
+                            
+                                <a href="indicatoare.php?categorie=obligare">
+                                    <p>Învață</p>
+                                </a>
+                            
                         </div>
-                        <span>Indicatoare de orientare</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
+
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/orientare1.png" alt=""></i>
+                                <i><img src="img/orientare2.png" alt=""></i>
+                                <i><img src="img/orientare3.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare de orientare</span>
+                            
+                                <a href="indicatoare.php?categorie=orientare">
+                                    <p>Învață</p>
+                                </a>
+                            
+                        </div>
+
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/informare3.png" alt=""></i>
+                                <i><img src="img/informare2.png" alt=""></i>
+                                <i><img src="img/informare1.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare de informare</span>
+                            
+                                <a href="indicatoare.php?categorie=informare">
+                                    <p>Învață</p>
+                                </a>
+                            
+                        </div>
                     </div>
 
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/informare3.png" alt=""></i>
-                            <i><img src="img/informare2.png" alt=""></i>
-                            <i><img src="img/informare1.png" alt=""></i>
+                    <div class="resurse-row3">
+                        <div class="categorie">
+                            <div class="poze-indicatoare">
+                                <i><img src="img/aditionale1.png" alt=""></i>
+                                <i><img src="img/aditionale2.png" alt=""></i>
+                                <i><img src="img/aditionale3.png" alt=""></i>
+                            </div>
+                            <span>Indicatoare adiționale</span>
+                            
+                                <a href="indicatoare.php?categorie=aditionale">
+                                    <p>Învață</p>
+                                </a>
+                            
                         </div>
-                        <span>Indicatoare de informare</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="resurse-row3">
-                    <div class="categorie">
-                        <div class="poze-indicatoare">
-                            <i><img src="img/aditionale1.png" alt=""></i>
-                            <i><img src="img/aditionale2.png" alt=""></i>
-                            <i><img src="img/aditionale3.png" alt=""></i>
-                        </div>
-                        <span>Indicatoare adiționale</span>
-                        <button>
-                            <a href="#">
-                                <p>Învață</p>
-                            </a>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
 
     <!-- footer -->
     <footer class="footer-home">
@@ -246,3 +291,4 @@
         </div>
     </footer>
 </body>
+
