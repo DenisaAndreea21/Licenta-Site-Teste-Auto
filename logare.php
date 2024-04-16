@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    unset($_SESSION['id_question_generator']);
+?>
 <!DOCTYPE html>
 <html lang="ro">
 

@@ -1,6 +1,7 @@
 <?php 
     session_start();
     $raspunsuri_corecte = isset($_SESSION['raspunsuri_corecte']) ? $_SESSION['raspunsuri_corecte'] : 0;
+    unset($_SESSION['id_question_generator']);
 ?>
 
 <!DOCTYPE html>

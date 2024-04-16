@@ -78,7 +78,12 @@
     text-align: left;
 }
 
-.categorie button{
+.categorie a:hover{
+    cursor: pointer;
+    background-color: var(--darkGray);
+}
+
+.categorie a{
     border-radius: 23px;
     background-color: var(--kindOfWhite);
     height: fit-content;
@@ -87,14 +92,6 @@
     position: absolute;
     bottom: 20px;
     align-self: center;
-}
-
-.categorie button:hover{
-    cursor: pointer;
-    background-color: var(--darkGray);
-}
-
-.categorie button a{
     font-family: "DM Sans", sans-serif;
     color: var(--kindOfBlack);
     font-size: 1.8rem;
@@ -111,4 +108,116 @@
 
 .ultima{
     margin: 0 auto;
+}
+
+.verificationBtn{
+    border-radius: 10px;
+    display: block;
+    height: 70px;
+    width: 300px;
+    align-items: center;
+    background-color: var(--lightBlue);
+}
+
+.verificationBtn:hover {
+    cursor: pointer;
+    background-color: var(--darkBlue);
+}
+
+.verificationBtn div{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    gap: 10px;
+}
+
+.verificationBtn img{
+    height: 25px;
+    width: auto;
+}
+
+.verificationBtn p{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    color: var(--kindOfWhite);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+.justificare{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#raspuns-verificare{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 10px auto;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    align-self: center; 
+}
+
+#text-verificare{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    align-self: center;
+}
+
+.backBtn{
+    margin-top: 25px;
+    border-radius: 30px;
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--pink);
+}
+
+.backBtn:hover {
+    cursor: pointer;
+    background-color: var(--darkPink);
+}
+
+.backBtn div{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    gap: 10px;
+}
+
+.backBtn img{
+    height: 25px;
+    width: auto;
+}
+
+.backBtn p{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    color: var(--kindOfBlack);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+.informatii-chestionar{
+    margin-top: 40px;
 }

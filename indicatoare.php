@@ -1,4 +1,6 @@
 <?php
+session_start();
+unset($_SESSION['id_question_generator']);
 require "includes/dbh.inc.php";
 $isIndicatoareDisplayed = false;
 if (isset($_GET['categorie'])) {

@@ -90,16 +90,20 @@ if (!isset($_SESSION['id_question_generator']) || empty($_SESSION['id_question_g
         }
     } 
     shuffle($_SESSION['id_question_generator']);
-    
+    print_r($_SESSION['id_question_generator']);
 }
+
 try{
     if (!empty($_SESSION['id_question_generator'])) {
+        echo "id: " . $_SESSION['id_question_generator'][0];
         $query = "SELECT is_correct
                     FROM answers
                     WHERE question_id = {$_SESSION['id_question_generator'][0]};";
             $stmt = $pdo->prepare($query);
             $stmt->execute();
             $raspunsuri_corecte = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            echo "din bd";
+            print_r($raspunsuri_corecte);
     }else {
         echo "Toate întrebările au fost completate!";
         header("Location: result.php");
@@ -135,9 +139,9 @@ if (isset($_POST['trimite'])) {
         }
         $correct_answers = array_column($raspunsuri_corecte, 'is_correct');
         if ($final == $correct_answers) {
-            $_SESSION['raspunsuri_corecte']++;
+                $_SESSION['raspunsuri_corecte']++;
         } else {
-            $_SESSION['raspunsuri_gresite']++;
+                $_SESSION['raspunsuri_gresite']++;
         }
         array_shift($_SESSION['id_question_generator']);
     } 

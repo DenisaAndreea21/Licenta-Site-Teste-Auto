@@ -1,5 +1,5 @@
 :root{
-    --gray: #D9D9D9;
+    --grAy: #D9D9D9;
     --orange: #E8B468;
     --darkOrange: #bd7206;
     --green: #32D242;
@@ -22,7 +22,7 @@
     width: 1400px;
     height: fit-content;
     padding: 20px;
-    background-color: var(--gray);
+    background-color: var(--grAy);
     margin: 10px auto;
 }
 
@@ -116,7 +116,7 @@
 
 .raspuns {
     background-color: var(--kindOfWhite);
-    border: 2px solid var(--gray);
+    border: 2px solid var(--grAy);
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
