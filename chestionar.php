@@ -95,7 +95,6 @@ if (!isset($_SESSION['id_question_generator']) || empty($_SESSION['id_question_g
 
 try{
     if (!empty($_SESSION['id_question_generator'])) {
-        echo "id: " . $_SESSION['id_question_generator'][0];
         $query = "SELECT is_correct
                     FROM answers
                     WHERE question_id = {$_SESSION['id_question_generator'][0]};";

@@ -1,5 +1,6 @@
 <?php 
-    session_start();
+    require_once 'includes/config_session.inc.php';
+    require_once 'includes/signup_view.inc.php';
     unset($_SESSION['id_question_generator']);
 ?>
 <!DOCTYPE html>
@@ -69,29 +70,22 @@
     <!--inregistrare-->
     <div class="container-inregistrare">
         <h3>Înregistrare</h3>
-        <form action="">
+        <form action="includes/signup.inc.php" method = "post">
             <h4>Formular</h4>
             <div class="formular">
-                <label for="lastName">Nume</label>
-                <input type="text" id="lastName" name="nume" class="inputText">
-
-                <label for="FirstName">Prenume</label>
-                <input type="text" id="FirstName" name="prenume" class="inputText">
-
-                <label for="email">Adresă de email</label>
-                <input type="text" id="email" name="mail" class="inputText">
-
-                <label for="password">Parolă</label>
-                <input type="password" id="password" name="pw" class="inputText">
+                <?php signup_inputs(); ?>
 
                 <div class="cb">
                     <input type="checkbox" id="acceptTerms" name="acceptTermenii" class="inputCheckbox">
                     <label for="acceptTerms">Am citit și sunt de acord cu Termenii și Condițiii și Politica de Confidențialitate a acestui site web.</label>
                 </div>
 
-                <input type="submit" value="Înregistrează-te" class="inputButton">
+                <button class="inputButton">Înregistrează-te</button>
             </div>
         </form>
+        <?php
+            check_signup_errors();
+        ?>
     </div>
 
     <!-- Footer -->

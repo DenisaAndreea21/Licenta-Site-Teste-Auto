@@ -1,5 +1,6 @@
 <?php 
-    session_start();
+    require_once 'includes/config_session.inc.php';
+    require_once 'includes/login_view.inc.php';
     unset($_SESSION['id_question_generator']);
 ?>
 <!DOCTYPE html>
@@ -69,7 +70,7 @@
     <!--logare-->
     <div class="container-logare">
         <h3>Bun Venit!</h3>
-        <form action="">
+        <form action="includes/login.inc.php" method = "post">
             <h4>Logare</h4>
             <div class="formular">
                 <label for="email">Adresă de email</label>
@@ -83,9 +84,16 @@
                     <label for="rememberMe">Ține-mă minte</label>
                 </div>
 
-                <input type="submit" value="Login" class="inputButton">
+                <button class="inputButton">Login</button>
             </div>
         </form>
+        <?php
+            print_name();
+            check_login_errors();
+        ?>
+        <form action="includes/logout.inc.php" method = "post">
+            <button class="inputButton">Logout</button>
+        </form>  
         <div class="sub-container">
             <a href="#">Ți-ai uitat parola?</a>
             <div>
