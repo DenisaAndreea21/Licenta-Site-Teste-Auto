@@ -2,35 +2,99 @@
     font-size: 62.5%;
 }
 
-.p{
-    font-size: 50px;
+p{
+    font-size: 30px;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-.main-intro button{
+form{
+    height: fit-content;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
+
+.promovat{
+    color: green;
+}
+
+.nepromovat{
+    color: red;
+}
+
+.btn{
     border-radius: 40px;
     background-color: white;
-    height: 45px;
+    height: fit-content;
     width: fit-content;
+    padding: 15px 25px;
+    margin: auto 0 auto 40px;
 }
 
-.main-intro button a{
+.btn a{
     display: flex;
     align-items: center;
 }
 
-.main-intro button a img{
+.btn a img{
     width: 28px;
     height: 28px; 
-    margin: 0 5px 0 15px;
+    margin: 0 5px 0 0;
 }
 
-.main-intro button a h1{
+.btn a p{
     font-size: 2rem;
+    height: fit-content;
+    width: fit-content;
     font-weight: 400;
-    padding: 0 15px 0 5px;
 }
 
-.main-intro button a:hover{
+.btn a:hover{
     cursor: pointer;
     color: blue;
+}
+
+.btn p{
+        font-size: 25px;
+        height: fit-content;
+        width: fit-content;
+}
+
+.sectiune_rezultat{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    border-radius: 20px;
+    margin: 150px auto;
+}
+
+.sect_invatare{
+    background-color: var(--pink);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.sect_invatare p{
+    width: 600px;
+    height: fit-content;
+}
+
+.sect_chestionar{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.sect_chestionar button{
+    background-color: var(--pink);
 }

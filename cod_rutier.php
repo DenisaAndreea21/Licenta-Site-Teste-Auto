@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['id_question_generator']);
+unset($_SESSION['timer_started']);
 require "includes/dbh.inc.php";
 $isCapitolDisplayed = false;
 if (isset($_GET['id_cr'])) {
@@ -60,7 +61,7 @@ if (isset($_GET['id_cr'])) {
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -88,6 +89,14 @@ if (isset($_GET['id_cr'])) {
 
     </div>
     <?php if (!$isCapitolDisplayed): ?>
+        <div class="wrapper-index">
+            <a class="backBtn" href="mediu_invatare.php">
+                <div>
+                    <img src="img/back.png" alt="">
+                    <p>Înapoi</p>
+                </div>
+            </a>
+        </div>
         <!-- capitole cod rutier -->
         <div class="wrapper-index">
             <div class="sectiune-capitole">
@@ -155,6 +164,14 @@ if (isset($_GET['id_cr'])) {
         </div> 
     <?php else: ?>
         <div class="wrapper-index">
+
+            <a class="backBtn" href="cod_rutier.php">
+                <div>
+                    <img src="img/back.png" alt="">
+                    <p>Înapoi</p>
+                </div>
+            </a>
+
             <h3 class="titlu"><?php echo $capitol['titlu_cr']; ?></h3>
             <div class="continut"> <?php echo $capitol['text_cr']; ?></div>
         </div>
@@ -179,7 +196,7 @@ if (isset($_GET['id_cr'])) {
                         <a href="index.php">
                             <li>Home</li>
                         </a>
-                        <a href="mediu_testare.php">
+                        <a href="chestionar.php">
                             <li>Mediu de testare</li>
                         </a>
                         <a href="mediu_invatare.php">

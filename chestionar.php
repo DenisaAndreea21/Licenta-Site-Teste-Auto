@@ -4,7 +4,7 @@ session_start();
 require "includes/dbh.inc.php";
 $raspunsuri_corecte = [];
 
-if (!isset($_SESSION['timer_started']) || isset($_POST['start_new_quiz'])) {
+if (!isset($_SESSION['timer_started'])) {
     // Setează sesiunea pentru timer
     $_SESSION['timer_started'] = true;
     // Setează timpul de start al sesiunii
@@ -90,7 +90,6 @@ if (!isset($_SESSION['id_question_generator']) || empty($_SESSION['id_question_g
         }
     } 
     shuffle($_SESSION['id_question_generator']);
-    print_r($_SESSION['id_question_generator']);
 }
 
 try{
@@ -101,8 +100,6 @@ try{
             $stmt = $pdo->prepare($query);
             $stmt->execute();
             $raspunsuri_corecte = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            echo "din bd";
-            print_r($raspunsuri_corecte);
     }else {
         echo "Toate întrebările au fost completate!";
         header("Location: result.php");
@@ -149,6 +146,11 @@ if (isset($_POST['trimite'])) {
     }
 }
 
+if(isset($_SESSION['raspunsuri_gresite']) && $_SESSION['raspunsuri_gresite']>4){
+    header("Location: result.php");
+    $_SESSION['done'] = 1;
+    exit();
+}
 
 // Verifică dacă a fost apăsat butonul "Skip"
 if (isset($_POST['skip'])) {
@@ -226,7 +228,7 @@ try {
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -249,7 +251,6 @@ try {
             </header>
         </div>
     </div>
-        
         
 
         <div class="informatii-chestionar">
@@ -342,7 +343,7 @@ try {
                         <a href="index.php">
                             <li>Home</li>
                         </a>
-                        <a href="mediu_testare.php">
+                        <a href="chestionar.php">
                             <li>Mediu de testare</li>
                         </a>
                         <a href="mediu_invatare.php">

@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['id_question_generator']);
+unset($_SESSION['timer_started']);
 require "includes/dbh.inc.php";
 $isIndicatoareDisplayed = false;
 if (isset($_GET['categorie'])) {
@@ -64,7 +65,7 @@ if (isset($_GET['categorie'])) {
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -102,6 +103,14 @@ if (isset($_GET['categorie'])) {
     </div>
 
     <?php if($isIndicatoareDisplayed){ ?>
+        <div class="wrapper-index">
+            <a class="backBtn" href="indicatoare.php" style="margin-bottom:30px;">
+                <div>
+                    <img src="img/back.png" alt="">
+                    <p>Înapoi</p>
+                </div>
+            </a>
+        </div>
         <div class="wrapper-indic">
             <?php foreach ($indicatoare as $indicator) {?>
                 <div class="cont_indicator">
@@ -112,10 +121,17 @@ if (isset($_GET['categorie'])) {
             <?php } ?>
         </div>
     <?php } else { ?>
+
         <!-- indicatoare -->
         <div class="wrapper-index">
+            <a class="backBtn" href="mediu_invatare.php">
+                <div>
+                    <img src="img/back.png" alt="">
+                    <p>Înapoi</p>
+                </div>
+            </a>
             <div class="sectiune-resurse">
-                <div class="container-resurse">
+                <div class="container-resurse" style="margin-top:50px;">
                     <div class="resurse-row1">
                         <div class="categorie">
                             <div class="poze-indicatoare">
@@ -244,7 +260,7 @@ if (isset($_GET['categorie'])) {
                         <a href="index.php">
                             <li>Home</li>
                         </a>
-                        <a href="mediu_testare.php">
+                        <a href="chestionar.php">
                             <li>Mediu de testare</li>
                         </a>
                         <a href="mediu_invatare.php">

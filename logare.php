@@ -2,6 +2,7 @@
     require_once 'includes/config_session.inc.php';
     require_once 'includes/login_view.inc.php';
     unset($_SESSION['id_question_generator']);
+    unset($_SESSION['timer_started']);
 ?>
 <!DOCTYPE html>
 <html lang="ro">
@@ -44,7 +45,7 @@
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -121,7 +122,7 @@
                     <h4>Pagini Utile</h4>
                     <ul>
                         <a href="index.php"><li>Home</li></a>
-                        <a href="mediu_testare.php"><li>Mediu de testare</li></a>
+                        <a href="chestionar.php"><li>Mediu de testare</li></a>
                         <a href="mediu_invatare.php"><li>Mediu de învățare</li></a>
                         <a href="indicatoare.php"><li>Indicatoare</li></a>
                         <a href="utile.php"><li>Utile</li></a>

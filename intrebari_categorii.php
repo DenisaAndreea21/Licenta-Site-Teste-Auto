@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['id_question_generator']);
+unset($_SESSION['timer_started']);
 require "includes/dbh.inc.php";
 $isCategorieDisplayed = false;
 //doar daca se selecteaza categorie
@@ -42,7 +43,7 @@ if (isset($_GET['categorie'])) {
                 $correct_answers = array_column($raspunsuri_corecte, 'is_correct');
         }else {
             echo "Toate întrebările au fost completate!";
-            header("Location: result.php");
+            header("Location: intrebari_categorii.php");
             session_destroy();
             session_unset();
             exit();
@@ -102,7 +103,7 @@ if (isset($_GET['categorie'])) {
         if (!empty($_SESSION['id_intrebari'])) {
             $first_question_id = $_SESSION['id_intrebari'][0]['question_id'];
 
-            $query = "SELECT question_text, image_url
+            $query = "SELECT question_text, image_url, question_id
                     FROM questions
                     WHERE question_id = :question_id";
             
@@ -142,7 +143,7 @@ if (isset($_GET['categorie'])) {
             echo "Toate întrebările au fost completate!";
             session_destroy();
             session_unset();
-            header("Location: result.php");
+            header("Location: intrebari_categorii.php");
             exit();
         }
         $stmt = null;
@@ -194,7 +195,7 @@ else{
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -260,7 +261,10 @@ else{
             </a>
         </div>
         <div class="informatii-chestionar">
-            <p>Intrebari ramase: <?php echo count($_SESSION['id_intrebari']);?></p>
+            <div class="rezultate_raspunsuri">
+                <p style="margin-right: 15px;">Intrebari ramase: <?php echo count($_SESSION['id_intrebari']);?></p>
+                <p>ID intrebare: <?php echo $intrebare['question_id'];?></p>
+            </div>
             <div class="rezultate_raspunsuri">
                 <p class="r_corecte">Răspunsuri corecte: <span><?php echo $_SESSION['rasp_corecte'];?></span></p>
                 <p class="r_gresite">Răspunsuri greșite: <span><?php echo $_SESSION['rasp_gresite'];?></span></p>
@@ -319,7 +323,7 @@ else{
                             <script>
                                 <?php session_destroy();
                                 session_unset(); ?>
-                                window.location.href = "result.php";
+                                window.location.href = "intrebari_categorii.php";
                             </script>
                         <?php endif; ?>
                     </div>
@@ -337,6 +341,13 @@ else{
     else { ?>
         <!-- Categorii -->
         <div class="wrapper-index">
+            <a class="backBtn" href="mediu_invatare.php">
+                <div>
+                    <img src="img/back.png" alt="">
+                    <p>Înapoi</p>
+                </div>
+            </a>
+
             <div class="sectiune-categorii">
                 <div class="row">
                     <div class="categorie">
@@ -435,7 +446,7 @@ else{
                     <h4>Pagini Utile</h4>
                     <ul>
                         <a href="index.php"><li>Home</li></a>
-                        <a href="mediu_testare.php"><li>Mediu de testare</li></a>
+                        <a href="chestionar.php"><li>Mediu de testare</li></a>
                         <a href="mediu_invatare.php"><li>Mediu de învățare</li></a>
                         <a href="indicatoare.php"><li>Indicatoare</li></a>
                         <a href="utile.php"><li>Utile</li></a>

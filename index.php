@@ -1,6 +1,7 @@
 <?php 
     session_start();
     unset($_SESSION['id_question_generator']);
+    unset($_SESSION['timer_started']);
 ?>
 <!DOCTYPE html>
 <html lang="ro">
@@ -41,7 +42,7 @@
                 <nav class="header-home-nav">
                     <ul>
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
-                        <li><a href="mediu_testare.php">Mediu de testare</a></li>
+                        <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
                         <li><a href="utile.php">Utile</a></li>
                         <li><a href="contact.php">Contact</a></li>
@@ -183,13 +184,13 @@
                     </div>
                 </a>
 
-                <a href="mediu_testare.php">
+                <a href="chestionar.php">
                     <div class="traseu-mediuDeTestare">
                         <div class="container-traseu-mediuDeTestare">
                             <i><img src="img/testare.png" alt=""></i>
                             <p>Mediu de testare</p>
                         </div>
-                        <div class="traseu-descMediuDeTestare">Când te simți pregătit, îți poți verifica cunoștințele cu un chestionar de 26 de întrebări prin 2 variante: răspuns afișat imediat sau după încheierea chestionarului.</div>
+                        <div class="traseu-descMediuDeTestare">Când te simți pregătit, îți poți verifica cunoștințele cu un chestionar de 26 de întrebări.</div>
                     </div>
                 </a>
             </div>
@@ -216,29 +217,29 @@
             <div class="recenzii">
                 <div class="recenzie">
                     <img src="img/ghilimele.png" alt="">
-                    <div class="text-recenzie">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    <div class="text-recenzie"> Acest site m-a ajutat foarte mult cand a trebuit sa ma pregatesc pentru examenul auto, recomand.</div>
                     <hr class="liniuta">
                     <div class="user-recenzie">
                         <img src="img/Maria.png" alt="">
-                        <span>Maria, Brașov</span>
+                        <span>Maria Ionescu</span>
                     </div>
                 </div>
                 <div class="recenzie">
                     <img src="img/ghilimele.png" alt="">
-                    <div class="text-recenzie">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    <div class="text-recenzie"> Imi place acest site pentru ca are o sectiune de invatare care este foarte de ajutor cand te pregatesti pentru sala.</div>
                     <hr class="liniuta">
                     <div class="user-recenzie">
                         <img src="img/ilie.jpg" alt="">
-                        <span>Ilie, Vaslui</span>
+                        <span>Ilie Ciobanu</span>
                     </div>
                 </div>
                 <div class="recenzie">
                     <img src="img/ghilimele.png" alt="">
-                    <div class="text-recenzie">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    <div class="text-recenzie"> Am postat o nelamurire in legatura cu o intrebare din sectiunea de invatare pe forum si mi s-a raspuns imediat.</div>
                     <hr class="liniuta">
                     <div class="user-recenzie">
                         <img src="img/mihai.jpg" alt="">
-                        <span>Mihai, București</span>
+                        <span>Mihai Laurentiu</span>
                     </div>
                 </div>
             </div>
@@ -274,7 +275,7 @@
                     <h4>Pagini Utile</h4>
                     <ul>
                         <a href="index.php"><li>Home</li></a>
-                        <a href="mediu_testare.php"><li>Mediu de testare</li></a>
+                        <a href="chestionar.php"><li>Mediu de testare</li></a>
                         <a href="mediu_invatare.php"><li>Mediu de învățare</li></a>
                         <a href="indicatoare.php"><li>Indicatoare</li></a>
                         <a href="utile.php"><li>Utile</li></a>
