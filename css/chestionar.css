@@ -8,13 +8,8 @@
     font-size: 62.5%;
 }
 
-.header-home-nav > ul > li:nth-child(2) > a {
-    color: var(--pink);
-}
-
 .BG{
     border-radius: 0px;
-    padding: 20px;
 }
 
 .footer-home{

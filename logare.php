@@ -26,7 +26,6 @@
 </head>
 
 <body>
-<body>
     <div class="BG">
         <div class="wrapper-index">
             <!-- HEADER -->
@@ -47,22 +46,34 @@
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
                         <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
-                        <li><a href="utile.php">Utile</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="forum.php">Forum</a></li>
                     </ul>
                 </nav>
 
                 <div class="header-home-buttons">
-                    <a href="logare.php">
+                <?php if(isset($_SESSION["user_id"])){ ?>
+                        <a href="my_account.php">
                         <button type="button">
-                            <p>Autentificare</p>
+                            <p>Contul meu</p>
                         </button>
-                    </a>
-                    <a href="inregistrare.php">
+                        </a>
+                        <a href="includes/logout.inc.php">
+                            <button type="button">
+                                <p>Logout</p>
+                            </button>
+                        </a>
+                    <?php } else{ ?>
+                        <a href="logare.php">
                         <button type="button">
-                            <p>Înregistrare</p>
+                            <p style="color:pink;">Autentificare</p>
                         </button>
-                    </a>
+                        </a>
+                        <a href="inregistrare.php">
+                            <button type="button">
+                                <p>Înregistrare</p>
+                            </button>
+                        </a>
+                    <?php } ?>
                 </div>
 
             </header>
@@ -88,13 +99,6 @@
                 <button class="inputButton">Login</button>
             </div>
         </form>
-        <?php
-            print_name();
-            check_login_errors();
-        ?>
-        <form action="includes/logout.inc.php" method = "post">
-            <button class="inputButton">Logout</button>
-        </form>  
         <div class="sub-container">
             <a href="#">Ți-ai uitat parola?</a>
             <div>
@@ -103,6 +107,9 @@
             </div>
         </div>
     </div>
+    <?php
+            check_login_errors();
+    ?>
 
     <!-- Footer -->
     <footer class="footer-home">

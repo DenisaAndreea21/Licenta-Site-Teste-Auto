@@ -9,12 +9,12 @@ function check_signup_errors(){
         echo '<br>';
 
         foreach ($errors as $error){
-            echo '<p>' . $error . '<?p>';
+            echo '<p class="eroare">' . $error . '</p>';
         }
 
         unset($_SESSION['errors_signup']);
     } else if(isset($_GET["signup"]) && $_GET["signup"] === "success"){
-        echo '<p>Inregistrare reusita!</p>'; 
+        echo '<p class="succes">Inregistrare reusita!</p>'; 
     }
 }
 

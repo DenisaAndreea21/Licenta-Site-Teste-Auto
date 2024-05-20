@@ -11,6 +11,10 @@
     font-size: 62.5%;
 }
 
+.BG{
+    padding: 20px;
+}
+
 h1{
     font-size: 2.8rem;
     font-family: "DM Sans", sans-serif;
@@ -128,14 +132,14 @@ a{
     border-radius: 36px;
     background-color: var(--kindOfWhite);
     display: block;
-    height: 40px;
+    height: 50px;
 }
 
 .header-home-buttons button p{
-    padding: 0 12px;
+    padding: 0 20px;
     color: var(--kindOfBlack);
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto Serif", serif;
+    font-weight: 500;
     font-size: 1.8rem;
     align-self: center;
 }
@@ -336,4 +340,3 @@ a{
     font-size: 2.5rem;
     align-self: center;
 }
-

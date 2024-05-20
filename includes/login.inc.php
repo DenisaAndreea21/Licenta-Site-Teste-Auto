@@ -37,7 +37,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_firstName"] = htmlspecialchars($result["prenume"]);
+        $_SESSION["user_lastName"] = htmlspecialchars($result["nume"]);
+        $_SESSION["user_email"] = htmlspecialchars($result["email"]);
         header("Location: ../logare.php?login=success");
+        header("Location: ../my_account.php");
 
         $pdo = null;
         $stmt = null;

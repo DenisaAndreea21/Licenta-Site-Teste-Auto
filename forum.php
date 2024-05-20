@@ -1,16 +1,18 @@
 <?php 
-    require_once 'includes/config_session.inc.php';
-    require_once 'includes/signup_view.inc.php';
-    unset($_SESSION['timer_started']);
+    session_start();
     unset($_SESSION['id_question_generator']);
+    unset($_SESSION['timer_started']);
+    date_default_timezone_set('Europe/Bucharest');
+    include 'includes/dbh.inc.php';
+    include 'includes/comment.inc.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TraseuSigur - Înregistrare</title>
+    <title>TraseuSigur - Forum</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +24,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/inregistrare.css">
+    <link rel="stylesheet" href="css/forum.css">
 </head>
 
 <body>
@@ -46,12 +48,12 @@
                         <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
                         <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
-                        <li><a href="forum.php">Forum</a></li>
+                        <li><a href="forum.php" style="color:pink;">Forum</a></li>
                     </ul>
                 </nav>
 
                 <div class="header-home-buttons">
-                <?php if(isset($_SESSION["user_id"])){ ?>
+                    <?php if(isset($_SESSION["user_id"])){ ?>
                         <a href="my_account.php">
                         <button type="button">
                             <p>Contul meu</p>
@@ -70,37 +72,37 @@
                         </a>
                         <a href="inregistrare.php">
                             <button type="button">
-                                <p style="color:pink;">Înregistrare</p>
+                                <p>Înregistrare</p>
                             </button>
                         </a>
                     <?php } ?>
                 </div>
 
             </header>
+
+            <!-- intro -->
+            <?php if(isset($_SESSION["user_id"])) { ?>
+                <h3 id="intro">Hello <?php echo $_SESSION["user_firstName"]; ?>, doresti sa adaugi un comentariu?</h3>
+            <?php } else { ?>
+                <h3 id="intro">Trebuie sa fii autentificat pentru a putea adauga un comentariu!</h3>
+            <?php }?>
         </div>
     </div>
-    <!--inregistrare-->
-    <div class="container-inregistrare">
-        <h3>Înregistrare</h3>
-        <form action="includes/signup.inc.php" method = "post">
-            <h4>Formular</h4>
-            <div class="formular">
-                <?php signup_inputs(); ?>
 
-                <div class="cb">
-                    <input type="checkbox" id="acceptTerms" name="acceptTermenii" class="inputCheckbox">
-                    <label for="acceptTerms">Am citit și sunt de acord cu Termenii și Condițiii și Politica de Confidențialitate a acestui site web.</label>
-                </div>
-
-                <button class="inputButton">Înregistrează-te</button>
-            </div>
-        </form>
+    <div class="wrapper-index">
         <?php
-            check_signup_errors();
-        ?>
+        if(isset($_SESSION["user_id"])) {
+            echo
+            "<form action='".setComment($pdo)."' method='POST' class='postComm'>
+                <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'> 
+                <textarea name='comment'></textarea>
+                <button name='commentSubmit' type='submit'>Posteaza</button>
+            </form>";
+        }
+            getComments($pdo);
+        ?>             
     </div>
-
-    <!-- Footer -->
+    
     <footer class="footer-home">
         <div class="wrapper-index"> 
             <div class="upperSection">

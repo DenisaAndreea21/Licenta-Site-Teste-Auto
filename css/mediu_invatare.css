@@ -2,10 +2,6 @@
     padding-bottom: 100px;
 }
 
-.header-home-nav > ul > li:first-child > a {
-    color: var(--pink);
-}
-
 .sectiune-resurse{
     padding-top: 50px;
 }

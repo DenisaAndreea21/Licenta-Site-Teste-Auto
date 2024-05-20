@@ -1,5 +1,4 @@
 .BG{
-    padding: 20px;
     border-radius: 0;
 }
 
@@ -167,4 +166,26 @@ label{
     cursor: pointer;
     background-color: var(--darkGray);
     font-weight: 500;
+}
+
+.eroare{
+    width: fit-content;
+    height: fit-content;
+    color: red;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.2; 
+    margin: 0 auto 20px auto;
+}
+
+.succes{
+    width: fit-content;
+    height: fit-content;
+    color: green;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.2; 
+    margin: 0 auto 100px auto;
 }

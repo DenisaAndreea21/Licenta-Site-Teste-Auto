@@ -1,16 +1,16 @@
 <?php 
     require_once 'includes/config_session.inc.php';
-    require_once 'includes/signup_view.inc.php';
-    unset($_SESSION['timer_started']);
+    require_once 'includes/account.inc.php';
     unset($_SESSION['id_question_generator']);
+    unset($_SESSION['timer_started']);
 ?>
+
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TraseuSigur - Înregistrare</title>
+    <title>TraseuSigur - Contul meu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/inregistrare.css">
+    <link rel="stylesheet" href="css/my_account.css">
 </head>
-
 <body>
     <div class="BG">
         <div class="wrapper-index">
@@ -51,10 +50,10 @@
                 </nav>
 
                 <div class="header-home-buttons">
-                <?php if(isset($_SESSION["user_id"])){ ?>
+                    <?php if(isset($_SESSION["user_id"])){ ?>
                         <a href="my_account.php">
                         <button type="button">
-                            <p>Contul meu</p>
+                            <p style="color:pink;">Contul meu</p>
                         </button>
                         </a>
                         <a href="includes/logout.inc.php">
@@ -70,7 +69,7 @@
                         </a>
                         <a href="inregistrare.php">
                             <button type="button">
-                                <p style="color:pink;">Înregistrare</p>
+                                <p>Înregistrare</p>
                             </button>
                         </a>
                     <?php } ?>
@@ -79,25 +78,31 @@
             </header>
         </div>
     </div>
-    <!--inregistrare-->
-    <div class="container-inregistrare">
-        <h3>Înregistrare</h3>
-        <form action="includes/signup.inc.php" method = "post">
-            <h4>Formular</h4>
-            <div class="formular">
-                <?php signup_inputs(); ?>
 
-                <div class="cb">
-                    <input type="checkbox" id="acceptTerms" name="acceptTermenii" class="inputCheckbox">
-                    <label for="acceptTerms">Am citit și sunt de acord cu Termenii și Condițiii și Politica de Confidențialitate a acestui site web.</label>
+    <div class="sectInfo">
+        <h3>Hello <?php echo $_SESSION["user_firstName"] ?></h3>
+
+        <a class="backBtn" href="chestionar.php">
+                <div>
+                    <img src="img/sagetica.png" alt="">
+                    <p>Rezolvă un chestionar</p>
                 </div>
+        </a>
 
-                <button class="inputButton">Înregistrează-te</button>
-            </div>
-        </form>
-        <?php
-            check_signup_errors();
-        ?>
+        <div class="informatiiPersonale">
+                <h4>Informații personale</h4>
+                <p class="descInfo">Nume</p>
+                <p class="info"> <?php print_name(); ?></p>
+                <br><br><br>
+                <p class="descInfo">Adresă de email</p>
+                <p class="info"> <?php print_email(); ?></p>
+        </div>
+
+        <a class="backBtn" href="includes/logout.inc.php">
+                <div>
+                    <p>Delogare</p>
+                </div>
+        </a>
     </div>
 
     <!-- Footer -->
@@ -157,3 +162,4 @@
         </div>
     </footer>
 </body>
+</html>

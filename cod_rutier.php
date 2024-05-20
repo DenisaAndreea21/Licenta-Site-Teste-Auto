@@ -60,25 +60,37 @@ if (isset($_GET['id_cr'])) {
 
                 <nav class="header-home-nav">
                     <ul>
-                        <li><a href="mediu_invatare.php">Mediu de învățare</a></li>
+                        <li><a href="mediu_invatare.php" style="color:pink;">Mediu de învățare</a></li>
                         <li><a href="chestionar.php">Mediu de testare</a></li>
                         <li><a href="indicatoare.php">Indicatoare</a></li>
-                        <li><a href="utile.php">Utile</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="forum.php">Forum</a></li>
                     </ul>
                 </nav>
 
                 <div class="header-home-buttons">
-                    <a href="logare.php">
+                <?php if(isset($_SESSION["user_id"])){ ?>
+                        <a href="my_account.php">
+                        <button type="button">
+                            <p>Contul meu</p>
+                        </button>
+                        </a>
+                        <a href="includes/logout.inc.php">
+                            <button type="button">
+                                <p>Logout</p>
+                            </button>
+                        </a>
+                    <?php } else{ ?>
+                        <a href="logare.php">
                         <button type="button">
                             <p>Autentificare</p>
                         </button>
-                    </a>
-                    <a href="inregistrare.php">
-                        <button type="button">
-                            <p>Înregistrare</p>
-                        </button>
-                    </a>
+                        </a>
+                        <a href="inregistrare.php">
+                            <button type="button">
+                                <p>Înregistrare</p>
+                            </button>
+                        </a>
+                    <?php } ?>
                 </div>
 
             </header>

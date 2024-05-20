@@ -383,13 +383,13 @@ i img{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-end; 
-    padding: 10px;
+    padding: 20px;
 }
 
 .container-traseu-codRutier {
     display: flex;
     align-items: center; 
-    margin-bottom: 35px;
+    margin: 0 auto 35px auto;
 }
 
 .container-traseu-codRutier i {
@@ -425,13 +425,13 @@ i img{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-end; 
-    padding: 10px;
+    padding: 20px;
 }
 
 .container-traseu-indicatoare{
     display: flex;
     align-items: center; 
-    margin-bottom: 35px;
+    margin: 0 auto 35px auto;
 }
 
 .container-traseu-indicatoare i {
@@ -467,13 +467,13 @@ i img{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-end; 
-    padding: 10px;
+    padding: 20px;
 }
 
 .container-traseu-mediuDeInvatare{
     display: flex;
     align-items: center; 
-    margin-bottom: 35px;
+    margin: 0 auto 35px auto;
 }
 
 .container-traseu-mediuDeInvatare i {
@@ -508,13 +508,13 @@ i img{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-end; 
-    padding: 10px;
+    padding: 20px;
 }
 
 .container-traseu-mediuDeTestare{
     display: flex;
     align-items: center; 
-    margin-bottom: 35px;
+    margin: 0 auto 35px auto;
 }
 
 .container-traseu-mediuDeTestare i {
