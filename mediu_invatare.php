@@ -140,7 +140,7 @@
 
     <!-- Footer -->
     <footer class="footer-home">
-        <div class="wrapper-index"> 
+        <div class="wrapper-index">
             <div class="upperSection">
                 <a href="index.php">
                     <div class="footer-home-logo">
@@ -155,12 +155,21 @@
                 <div class="util-footer">
                     <h4>Pagini Utile</h4>
                     <ul>
-                        <a href="index.php"><li>Home</li></a>
-                        <a href="chestionar.php"><li>Mediu de testare</li></a>
-                        <a href="mediu_invatare.php"><li>Mediu de învățare</li></a>
-                        <a href="indicatoare.php"><li>Indicatoare</li></a>
-                        <a href="utile.php"><li>Utile</li></a>
-                        <a href="about.php"><li>Despre noi</li></a>
+                        <a href="index.php">
+                            <li>Home</li>
+                        </a>
+                        <a href="chestionar.php">
+                            <li>Mediu de testare</li>
+                        </a>
+                        <a href="mediu_invatare.php">
+                            <li>Mediu de învățare</li>
+                        </a>
+                        <a href="indicatoare.php">
+                            <li>Indicatoare</li>
+                        </a>
+                        <a href="forum.php">
+                            <li>Forum</li>
+                        </a>
                     </ul>
                 </div>
 
@@ -195,3 +204,4 @@
         </div>
     </footer>
 </body>
+</html>

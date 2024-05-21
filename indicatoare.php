@@ -281,11 +281,8 @@ if (isset($_GET['categorie'])) {
                         <a href="indicatoare.php">
                             <li>Indicatoare</li>
                         </a>
-                        <a href="utile.php">
-                            <li>Utile</li>
-                        </a>
-                        <a href="about.php">
-                            <li>Despre noi</li>
+                        <a href="forum.php">
+                            <li>Forum</li>
                         </a>
                     </ul>
                 </div>
@@ -321,4 +318,4 @@ if (isset($_GET['categorie'])) {
         </div>
     </footer>
 </body>
-
+</html>

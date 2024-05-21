@@ -365,11 +365,8 @@ try {
                         <a href="indicatoare.php">
                             <li>Indicatoare</li>
                         </a>
-                        <a href="utile.php">
-                            <li>Utile</li>
-                        </a>
-                        <a href="about.php">
-                            <li>Despre noi</li>
+                        <a href="forum.php">
+                            <li>Forum</li>
                         </a>
                     </ul>
                 </div>
