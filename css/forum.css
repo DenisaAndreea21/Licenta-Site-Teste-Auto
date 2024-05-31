@@ -3,6 +3,10 @@
     margin-bottom: 50px;
 }
 
+body{
+    background-color: rgb(251, 211, 219);
+}
+
 #intro{
     color: var(--kindOfWhite);
     height: fit-content;
@@ -19,7 +23,7 @@ textarea{
     height: 200px;
     resize: none;
     border-radius: 10px;
-    background-color: var(--gray);
+    background-color: rgb(255, 230, 234);
     border: var(--kindOfBlack) 3px solid;
     color: var(--kindOfBlack);
     padding: 20px;
@@ -37,11 +41,36 @@ textarea{
     flex-direction: column;
 }
 
+.container-buttons{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.uploadButton{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--kindOfBlack);
+    font-size: 2rem;
+    line-height: 1.2; 
+    font-family: "Roboto Serif", serif;
+}
+
+.uploadButton:hover{
+    cursor: pointer;
+}
+
 .postComm button{
     width: fit-content;
     height: fit-content;
     background-color: var(--kindOfBlack);
-    margin: 20px 0 0 auto;
+    margin-top: 20px;
     border-radius: 5px;
     padding: 15px 30px;
     font-weight: 600;
@@ -64,10 +93,12 @@ textarea{
 .comentariu{
     width: 1400px;
     height: fit-content;
-    background-color: var(--gray);
+    background-color: rgb(255, 230, 234);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .commUsername{
@@ -105,4 +136,38 @@ textarea{
     width: fit-content;
     height: fit-content;
     margin-bottom: 50px;
+}
+
+.commImage{
+    width: 90%;
+    height: auto;
+    margin: 20px auto 0 auto;
+}
+
+.commVideo{
+    width: 90%;
+    height: auto;
+    margin: 20px auto 0 auto;
+}
+
+.fileNameImage{
+    width: fit-content;
+    height: fit-content;
+    margin: 10px 0 0 10px;
+    font-weight: 500;
+    color: var(--kindOfBlack);
+    font-size: 1.8rem;
+    line-height: 1.2; 
+    font-family: "Roboto Serif", serif;
+}
+
+.fileNameVideo{
+    width: fit-content;
+    height: fit-content;
+    margin: 10px 0 0 10px;
+    font-weight: 500;
+    color: var(--kindOfBlack);
+    font-size: 1.8rem;
+    line-height: 1.2; 
+    font-family: "Roboto Serif", serif;
 }

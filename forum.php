@@ -92,12 +92,24 @@
     <div class="wrapper-index">
         <?php
         if(isset($_SESSION["user_id"])) {
-            echo
-            "<form action='".setComment($pdo)."' method='POST' class='postComm'>
+            echo "
+            <form action='".setComment($pdo)."' method='POST' class='postComm' enctype='multipart/form-data'>
                 <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'> 
+
                 <textarea name='comment'></textarea>
-                <button name='commentSubmit' type='submit'>Posteaza</button>
+
+                <div class='container-buttons'>
+                    <input type='file' accept='image/*' name='image' id='uploadButtonImage' style='display: none;'>
+                    <label for='uploadButtonImage' class='uploadButton'>Adauga poza</label>
+                    <button name='commentSubmit' type='submit'>Posteaza</button>
+                </div>
+                <span class='fileNameImage'>Nicio poza selectata</span>
+
+                <input type='file' accept='video/*' name='video' id='uploadButtonVideo' style='display: none;'>
+                <label for='uploadButtonVideo' class='uploadButton'>Adauga video</label>
+                <span class='fileNameVideo'>Niciun video selectat</span>
             </form>";
+
         }
             getComments($pdo);
         ?>             
@@ -168,4 +180,23 @@
         </div>
     </footer>
 </body>
-    </html>
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('uploadButtonImage').addEventListener('change', function() {
+            var fileName = this.files[0] ? this.files[0].name : 'Nicio poza selectata';
+            document.querySelector('.fileNameImage').textContent = fileName;
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('uploadButtonVideo').addEventListener('change', function() {
+            var fileName = this.files[0] ? this.files[0].name : 'Niciun video selectat';
+            document.querySelector('.fileNameVideo').textContent = fileName;
+        });
+    });
+</script>
